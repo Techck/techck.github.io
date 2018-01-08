@@ -9,13 +9,13 @@
     left: 0;
     z-index: 100000;
 }
-.sidebar_wrap .sidebar{
+.sidebar_wrap .sidebar {
     width: 300px;
     height: 100%; 
     background-color:#323232;
     zoom: 1;
 }
-.sidebar_wrap .sidebar .info{
+.sidebar_wrap .sidebar .info {
     height: 300px;
     text-align: center;
     margin: auto;
@@ -25,25 +25,67 @@
     right: 0;
     bottom: 0;
 }
-.sidebar_wrap .sidebar .info .name{
+.sidebar_wrap .sidebar .info .name {
     color: white;
     font-size: 30px;
     margin: 20px;
 }
-.sidebar_wrap .sidebar .info .text{
+.sidebar_wrap .sidebar .info .text {
     color: white;
     font-size: 20px;
     margin: 20px;
 }
-.sidebar_wrap .sidebar .info a{
+.sidebar_wrap .sidebar .info a {
     margin: 10px;
-}
-.content {
-    background-color: aqua;
-    margin-left: 300px;
 }
 .head {
     width: 150px;
     height: 150px;
     border-radius: 75px;
+}
+.content {
+    margin-left: 300px;
+}
+.content .list_content .list_item {
+    width: 90%;
+    border: 1px solid;
+    border-color: rgb(209, 209, 209);
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f1f0f0;
+    float: left;
+}
+.content .list_content .list_item .project_img {
+    float: left;
+    margin-right: 20px;
+}
+.content .list_content .list_item .project_img img {
+    width: 100px;
+    height: 100px;
+}
+.content .list_content .list_item .project {
+    float: left;
+    margin-top: 10px;
+    width: 83%;
+    /* background-color: antiquewhite; */
+}
+.project_link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 30px;
+}
+.project_link:hover {
+    color: #c76363;
+    text-decoration: underline;
+}
+.content .list_content .list_item .project dl{
+    margin-top: 10px;
+}
+.content .list_content .list_item .project dt{
+    line-height: 25px;
+}
+.content button{
+    padding: 10px;
+    border-radius: 10px;
 }
