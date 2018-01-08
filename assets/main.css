@@ -45,30 +45,31 @@
 }
 .content {
     margin-left: 300px;
+    padding: 20px;
 }
 .content .list_content .list_item {
-    width: 90%;
+    float: left;
+    width: 100%;
     border: 1px solid;
     border-color: rgb(209, 209, 209);
     border-radius: 10px;
-    margin: 20px;
-    padding: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
     background-color: #f1f0f0;
-    float: left;
+}
+.content .list_content .list_item .list_item_content {
+    margin: 20px;
 }
 .content .list_content .list_item .project_img {
     float: left;
-    margin-right: 20px;
+    margin-bottom: 20px;
 }
 .content .list_content .list_item .project_img img {
     width: 100px;
     height: 100px;
 }
 .content .list_content .list_item .project {
-    float: left;
-    margin-top: 10px;
-    width: 83%;
-    /* background-color: antiquewhite; */
+    margin-left: 120px;
 }
 .project_link {
     color: #000000;
