@@ -31,13 +31,28 @@
         </div>
     </div>
 
+    <!-- 标题栏 -->
+    <div class="titlebar_wrap" id="titlebar_id">
+        <div class="titlebar">
+            <div class="info">
+                <p class="name">黄 越</p>
+                <p class="text">Android工程师</p>
+            </div>
+            <div class="blog">
+                <a href="http://blog.csdn.net/techck"><img title="CSDN" src="./images/logo_csdn.png"/></a>
+                <a href="https://github.com/Techck"><img title="GitHub" src="./images/logo_github.png"/></a>
+                <a href="mailto:506255654@qq.com"><img title="邮件联系我" src="./images/logo_email.png"/></a>
+            </div>
+        </div>
+    </div>
+
     <!-- 内容区域 -->
     <div class="content" id="content_id">
         <div class="list_content" id="list_content">
             <div class="list_item">
                 <div class="list_item_content">
                     <div class="project_img">
-                        <img src="./images/logo_tf.png"/>
+                        <a href="http://url.cn/5o2oL47"><img src="./images/logo_tf.png"/></a>
                     </div>
                     <div class="project">
                         <a class="project_link" href="http://url.cn/5o2oL47">TF快传</a>
@@ -55,7 +70,7 @@
             <div class="list_item">
                 <div class="list_item_content">
                     <div class="project_img">
-                        <img src="./images/logo_funnyruler.png"/>
+                        <a href="http://url.cn/5iHy041"><img src="./images/logo_funnyruler.png"/></a>
                     </div>
                     <div class="project">
                         <a class="project_link" href="http://url.cn/5iHy041">Funny Ruler</a>
@@ -77,7 +92,8 @@
     </div>
 
     <script>
-        //边栏的节点引用
+        //节点引用
+        var titlebar = document.getElementById("titlebar_id");
         var sidebar = document.getElementById("sidebar_id");
         var content = document.getElementById("content_id");
         //当前模式是PC还是手机模式，取反标记，因为第一次会判断一次
@@ -95,12 +111,16 @@
                 isInPC = false;
                 //手机模式
                 document.body.removeChild(sidebar);
+                document.body.appendChild(titlebar);
                 content.style.marginLeft = "0px";
+                content.style.marginTop = "30px";
             } else if (totalWidth > 600 && !isInPC) {
                 isInPC = true;
                 //电脑模式
                 document.body.appendChild(sidebar);
+                document.body.removeChild(titlebar);
                 content.style.marginLeft = "300px";
+                content.style.marginTop = "0px";
             }
         }      
     </script>

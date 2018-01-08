@@ -38,10 +38,48 @@
 .sidebar_wrap .sidebar .info a {
     margin: 10px;
 }
-.head {
+.sidebar_wrap .sidebar .info .head {
     width: 150px;
     height: 150px;
     border-radius: 75px;
+}
+.titlebar_wrap {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+}
+.titlebar_wrap .titlebar {
+    height: 80px;
+    width: 100%; 
+    background-color:#323232;
+    zoom: 1;
+    position:relative;
+}
+.titlebar_wrap .titlebar .info {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 50px;
+}
+.titlebar_wrap .titlebar .info .name {
+    color: white;
+    font-size: 20px;
+}
+.titlebar_wrap .titlebar .info .text {
+    color: white;
+    font-size: 10px;
+    margin-top: 10px;
+}
+.titlebar_wrap .titlebar .blog {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 150px;
+}
+.titlebar_wrap .titlebar .blog a {
+    margin: 10px;
 }
 .content {
     margin-left: 300px;
