@@ -30,6 +30,45 @@ function resizeChange(){
     }
 };
 (function(){
-    let root = document.getElementById("list_content");
-    console.log(info);
-})();      
+    $.getJSON("./assets/info.json", function(data){
+        console.log(data);
+        var info = data;
+        //列表根节点
+        let root = document.getElementById("list_content");
+        for (let i = 0; i < info.project.length; i++) {
+            //获取一个项目对象
+            let element = info.project[i];
+            //创建一个新的子项div
+            let itemRoot = document.createElement("div");
+            itemRoot.className = "list_item";
+            let itemContent = document.createElement("div");
+            itemContent.className = "list_item_content";
+            itemRoot.appendChild(itemContent);
+            //创建头像区域
+            let itemHeader = document.createElement("div");
+            itemHeader.className = "project_img";
+            itemHeader.innerHTML = "<a href='"+element.url+"'><img src='"+element.image+"'/></a>";
+            itemContent.appendChild(itemHeader);
+            //创建项目信息区域
+            let itemInfo = document.createElement("div");
+            itemInfo.className = "project";
+            //创建项目标题
+            let infoName = document.createElement("a");
+            infoName.className = "project_link";
+            infoName.href = element.url;
+            infoName.innerHTML = element.name;
+            itemInfo.appendChild(infoName);
+            //创建项目简介
+            let infoContent = document.createElement("dl");
+            //循环添加简介
+            for (let j = 0; j < element.content.length; j++) {
+                let infoContentDetail = document.createElement("dt");
+                infoContentDetail.innerHTML = element.content[j];
+                infoContent.appendChild(infoContentDetail);
+            }
+            itemInfo.appendChild(infoContent);
+            itemContent.appendChild(itemInfo);
+            root.appendChild(itemRoot);
+        }
+    });
+})();

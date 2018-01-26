@@ -5,7 +5,8 @@
     "project":[
         {
             "name":"TF快传",
-            "image":"./images/logo_tf",
+            "image":"./images/logo_tf.png",
+            "url":"http://url.cn/5o2oL47",
             "content":[
                 "1、无网状态：手机之间可以通过扫描二维码和识别声波收发文件",
                 "2、有网状态：扫描二维码通过云服务器收发文件",
