@@ -47,7 +47,7 @@ function resizeChange(){
  */
 function setTitleBar(info) {
     let header = document.getElementsByClassName("head");
-    header.src = "\"" + info.image + "\"";
+    header[0].src = info.image;
     let names = document.getElementsByClassName("name");
     for (let i = 0; i < names.length; i++) {
         names[i].innerHTML = info.name;
