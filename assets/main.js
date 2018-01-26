@@ -4,7 +4,18 @@ var sidebar = document.getElementById("sidebar_id");
 var content = document.getElementById("content_id");
 //当前模式是PC还是手机模式，取反标记，因为第一次会判断一次
 var isInPC = document.body.clientWidth > 600 ? false : true;
-resizeChange();
+/**
+ * 获取数据
+ */
+(function(){
+    $.getJSON("./assets/info.json", function(data){
+        console.log(data);
+        var info = data;
+        setTitleBar(info);
+        resizeChange();
+        setProjectData(info);
+    });
+})();
 //监听浏览器宽度的改变
 window.onresize = function(){
     resizeChange();
@@ -29,14 +40,7 @@ function resizeChange(){
         content.style.marginTop = "0px";
     }
 };
-(function(){
-    $.getJSON("./assets/info.json", function(data){
-        console.log(data);
-        var info = data;
-        setTitleBar(info);
-        setProjectData(info);
-    });
-})();
+
 /**
  * set data for titlebar in top and left
  * @param {*} info 
