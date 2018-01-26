@@ -33,8 +33,32 @@ function resizeChange(){
     $.getJSON("./assets/info.json", function(data){
         console.log(data);
         var info = data;
-        //列表根节点
-        let root = document.getElementById("list_content");
+        setTitleBar(info);
+        setProjectData(info);
+    });
+})();
+/**
+ * set data for titlebar in top and left
+ * @param {*} info 
+ */
+function setTitleBar(info) {
+    let header = document.getElementsByClassName("head");
+    header.src = info.image;
+    let names = document.getElementsByClassName("name");
+    for (let i = 0; i < names.length; i++) {
+        names[i].innerHTML = info.name;
+    }
+    let texts = document.getElementsByClassName("text");
+    for (let i = 0; i < texts.length; i++) {
+        texts[i].innerHTML = info.work;
+    }
+}
+/**
+ * set data for project list
+ * @param {*} info 
+ */
+function setProjectData(info) {
+    let root = document.getElementById("list_content");
         for (let i = 0; i < info.project.length; i++) {
             //获取一个项目对象
             let element = info.project[i];
@@ -70,5 +94,4 @@ function resizeChange(){
             itemContent.appendChild(itemInfo);
             root.appendChild(itemRoot);
         }
-    });
-})();
+}
