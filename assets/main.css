@@ -46,6 +46,7 @@
 .titlebar_wrap {
     position: fixed;
     width: 100%;
+    min-width: 400px;
     top: 0;
     left: 0;
     z-index: 100000;
@@ -106,6 +107,10 @@
     width: 100px;
     height: 100px;
 }
+.content .list_content .list_item .project_img img:hover {
+    transition: transform 0.15s linear;
+    transform: scale(1.10); 
+}
 .content .list_content .list_item .project {
     margin-left: 120px;
 }
@@ -123,8 +128,4 @@
 }
 .content .list_content .list_item .project dt{
     line-height: 25px;
-}
-.content button{
-    padding: 10px;
-    border-radius: 10px;
 }
