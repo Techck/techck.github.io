@@ -28,4 +28,8 @@ function resizeChange(){
         content.style.marginLeft = "300px";
         content.style.marginTop = "0px";
     }
-}      
+};
+(function(){
+    let root = document.getElementById("list_content");
+    console.log(info);
+})();      
