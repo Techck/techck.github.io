@@ -2,6 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
+body {
+    min-width: 350px;
+}
 .sidebar_wrap {
     position: fixed;
     height: 100%;
