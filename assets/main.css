@@ -67,11 +67,11 @@
 .titlebar_wrap .titlebar .info .name {
     color: white;
     font-size: 20px;
+    line-height: 25px
 }
 .titlebar_wrap .titlebar .info .text {
     color: white;
     font-size: 10px;
-    /* margin-top: 0px; */
 }
 .titlebar_wrap .titlebar .blog {
     position: absolute;
