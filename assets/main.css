@@ -109,9 +109,9 @@ body {
 .content .list_content .list_item .project_img img {
     width: 100px;
     height: 100px;
+    transition: transform 0.15s linear;
 }
 .content .list_content .list_item .project_img img:hover {
-    transition: transform 0.15s linear;
     transform: scale(1.10); 
 }
 .content .list_content .list_item .project {
