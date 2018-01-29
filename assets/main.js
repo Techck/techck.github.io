@@ -28,14 +28,11 @@ window.onresize = function(){
 function resizeChange(){
     //获取网页可见区域宽度
     var totalWidth = document.body.clientWidth;
-    console.log(totalWidth);
     if (totalWidth <= 600 && isInPC) {
         isInPC = false;
         //手机模式
         sidebar.style.display = "none";
         titlebar.style.display = "block";
-        // document.body.removeChild(sidebar);
-        // document.body.appendChild(titlebar);
         content.style.marginLeft = "0px";
         content.style.marginTop = "60px";
     } else if (totalWidth > 600 && !isInPC) {
@@ -43,8 +40,6 @@ function resizeChange(){
         //电脑模式
         sidebar.style.display = "block";
         titlebar.style.display = "none";
-        // document.body.appendChild(sidebar);
-        // document.body.removeChild(titlebar);
         content.style.marginLeft = "300px";
         content.style.marginTop = "0px";
     }

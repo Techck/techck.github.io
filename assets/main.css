@@ -71,7 +71,7 @@
 .titlebar_wrap .titlebar .info .text {
     color: white;
     font-size: 10px;
-    margin-top: 5px;
+    /* margin-top: 0px; */
 }
 .titlebar_wrap .titlebar .blog {
     position: absolute;
